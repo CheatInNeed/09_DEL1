@@ -2,6 +2,7 @@
 public class TotalPoints {
 
 
+<<<<<<< HEAD
     int totalPoints = 0;
 
 
@@ -20,4 +21,14 @@ public class TotalPoints {
 
 
 
+=======
+
+
+
+
+
+
+
+    
+>>>>>>> a317292c61cc07931667c0602a1890d27df7ac65
 }
