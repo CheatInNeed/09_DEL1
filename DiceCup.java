@@ -10,30 +10,31 @@ public class DiceCup extends TotalPoints{
     int roundNr = 0;
 
         void rollDice (){
-            prevDie2 = die2;
-            prevDie1 = die1;
-            die1 = rand.nextInt(1, 7);
-            die2 = rand.nextInt(1, 7);
+            this.prevDie2 = die2;
+            this.prevDie1 = die1;
+            this.die1 = rand.nextInt(1, 7);
+            this.die2 = rand.nextInt(1, 7);
+            setTotalPoints(getSum());
             roundNr++;
         }
         int getSum(){
-            int sum = die1 + die2;
+            int sum = this.die1 + this.die2;
             return sum;
         }
         int getDie1(){
-            return die1;
+            return this.die1;
         }
         int getDie2(){
-            return die2;
+            return this.die2;
         }
         int getPrevDie1() {
-            return prevDie1;
+            return this.prevDie1;
         }
         int getPrevDie2() {
-            return prevDie2;
+            return this.prevDie2;
         }
         int getRoundNr(){
-            return roundNr;
+            return this.roundNr;
         }
         boolean getIsEns(){
             if (die1 == die2) {

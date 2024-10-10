@@ -1,7 +1,7 @@
 public class Rules{
-    final int winningScore = 40;
+    static final int winningScore = 40;
 
-    boolean isWinning(int score){
+    static boolean isWinning(int score){
         if (score >= winningScore){
             return true;
         }

@@ -15,15 +15,15 @@ public class Game extends Player {
                         System.out.println(player.getName()+" rolled "+player.getDie1()+" & "+player.getDie2());
                         if (player.getIsEns() && player.getDie1() == 1) {
                             player.dropPoints();
-                            System.out.println(player.getName()+" rolled "+player.getDie1()+" & "+player.getDie2());
                             System.out.println(player.getName()+" has lost all points :(");
                         } else if (player.getIsEns() && !(player.getDie1() == 1)) {
                             player.rollDice();
+                            System.out.println(player.getName()+" got extra turn!");
                             if (player.getIsEns() && player.getDie1() == 6 && player.getPrevDie1() == 6) {
                                 System.out.println(player.getName()+" won, rolled 6's twice!!!");
                                 break outerLoop;
                             }
-                            System.out.println(player.getName()+" rolled "+player.getDie1()+" & "+player.getDie2());                        } 
+                            System.out.println(player.getName()+" rolled again, "+player.getDie1()+" & "+player.getDie2());                        } 
                     } else if (input.equals("stop")) {
                         break outerLoop;
                     }
@@ -32,6 +32,10 @@ public class Game extends Player {
                     System.out.println(player.getName() + ": " + player.getTotalPoints());
                     if (Rules.isWinning(player.getTotalPoints())) {
                         System.out.println(player.getName() + " WON: " + player.getTotalPoints());
+                        System.out.println("Total score of players:");
+                        for (Player player2 : players) {
+                            System.out.println(player2.getName()+": "+player2.getTotalPoints());
+                        }
                         scanner.close();
                         return;
                     }
