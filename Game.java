@@ -2,10 +2,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Game extends Player {
+    // startGame method, takes a list 
     public static void startGame(List<Player> players, Scanner scanner){
         String input;
+        System.out.println("Type 'r' to roll the Dice.");
             outerLoop:
+            // While loop descripes entirety of the game
             while (true) {
+                // For loop for each player to rool, each iteration is a round
                 for (Player player : players) {
                     System.out.println(player.getName() + "'s turn!");
                     input = scanner.nextLine();
@@ -28,6 +32,7 @@ public class Game extends Player {
                         break outerLoop;
                     }
                 }
+                // For loop for checking for winnners
                 for (Player player : players) {
                     System.out.println(player.getName() + ": " + player.getTotalPoints());
                     if (Rules.isWinning(player.getTotalPoints())) {
