@@ -3,12 +3,10 @@ import java.util.Random;
 public class DiceCup extends TotalPoints{
     Random rand = new Random();
 
-   int die1;
-   int die2;
-
+    int die1;
+    int die2;
     int prevDie1;
     int prevDie2;
-
     int roundNr = 0;
 
         void rollDice (){
@@ -28,8 +26,27 @@ public class DiceCup extends TotalPoints{
         int getDie2(){
             return die2;
         }
+        int getPrevDie1() {
+            return prevDie1;
+        }
+        int getPrevDie2() {
+            return prevDie2;
+        }
         int getRoundNr(){
             return roundNr;
+        }
+        boolean getIsEns(){
+            if (die1 == die2) {
+                return true;
+            }
+            return false;
+        }
+
+        boolean getPrevIsEns(){
+            if (prevDie1 == prevDie2) {
+                return true;
+            }
+            return false;
         }
 
     }
