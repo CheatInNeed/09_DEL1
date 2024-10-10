@@ -1,5 +1,13 @@
-public class main {
-    public static void main(String[] args) {
-        System.out.println("Hello world");
+class player {
+    String name;
+    
+    player (String name) {
+        this.name = name;
+    }
+    void setName(String input){
+        this.name = input;
+    }
+    String getName(){
+        return this.name;
     }
 }
