@@ -1,9 +1,9 @@
-class player {
+public class Player {
     String name;
     
-    player (String name) {
-        this.name = name;
-    }
+    // public Player(String name) {
+    //     this.name = name;
+    // }
     void setName(String input){
         this.name = input;
     }
