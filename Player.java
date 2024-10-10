@@ -1,4 +1,4 @@
-public class Player {
+public class Player extends DiceCup {
     String name;
     
     // public Player(String name) {

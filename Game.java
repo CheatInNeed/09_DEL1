@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Scanner;
 
 public class Game extends Player {
     public static void startGame(List<Player> players, Scanner scanner){
