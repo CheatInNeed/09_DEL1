@@ -15,6 +15,7 @@ public class main {
             player.setName(scanner.nextLine());
             players.add(player);
         }
+        
         Game.startGame(players, scanner);
     }
 }
